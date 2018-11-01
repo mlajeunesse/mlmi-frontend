@@ -1,0 +1,57 @@
+/*
+*	Custom utilities
+*/
+
+@mixin zone() {
+  border: 1px dashed $red;
+}
+
+@mixin antialias() {
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin grayscale($percent: 100%) {
+  filter: grayscale($percent);
+}
+
+@function rem($px) {
+  @return $px * 1rem / $font-base-size;
+}
+
+@function em($px, $base: $font-base-size) {
+  @return ($px * 1em / $base);
+}
+
+/*
+*  Custom media queries
+*/
+
+@mixin mobile() {
+  @include media-breakpoint-down(sm) {
+    @content;
+  }
+}
+
+@mixin medium() {
+  @include media-breakpoint-between(md, md) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @include media-breakpoint-up(md) {
+    @content;
+  }
+}
+
+@mixin large() {
+  @include media-breakpoint-up(xl) {
+    @content;
+  }
+}
+
+@mixin retina() {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @content;
+  }
+}

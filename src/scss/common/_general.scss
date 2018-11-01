@@ -1,0 +1,62 @@
+/*
+*  General body styles
+*/
+
+html,
+body {
+  // @include source-sans();
+  background-color: $white;
+  color: $dark;
+  font-size: #{$font-base-size}px;
+}
+
+::selection {
+  background-color: $black;
+  color: $white;
+}
+
+@media screen and (min-width: $xl-breakpoint) {
+  html,
+  body {
+    font-size: #{($font-base-size * $xl-base-size)}px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $black;
+}
+
+/*
+*  Helpers and resets
+*/
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+button {
+  cursor: pointer;
+  appearance: none;
+  border: 0;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}

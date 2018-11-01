@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>{{siteTitle}}</title>
+	<link rel="stylesheet" href="{{assets}}/css/styles.min.css">
+</head>
+<body>
+	{% include "partials/header.html" %}
+	<main class="main">
+		{% block content %} {% endblock %}
+	</main>
+	{% include "partials/footer.html" %}
+	<script src="{{assets}}/js/app.min.js"></script>
+</body>
+</html>
